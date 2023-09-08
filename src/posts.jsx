@@ -1,20 +1,24 @@
 import { useEffect, useState } from "react"
+import Post from "./post"
 
 // component 
 export default function Posts() {
     //store load
-    const [post, setpost] = useState
+    const [posts, setposts] = useState([])
     //useeffect
     useEffect(() => {
         fetch("https://jsonplaceholder.typicode.com/posts")
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => setposts(data))
     }, [])
     //jsx
     return (
         // css class use karar jonno classname deya lage
-        <div className="stylepost">
-            <h3> post:</h3>
+        <div className="">
+            <h3> post:{posts.length}</h3>
+            {
+                posts.map(post => <Post post={post}></Post>)
+            }
         </div>
     )
     // 

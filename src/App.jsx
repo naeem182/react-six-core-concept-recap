@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Posts from './posts'
 import './PostStyle.css'
+import post from './post'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -25,13 +26,15 @@ function App() {
       <div style={olstyle}>
         <ol >
           <li>Components</li>
-          <Posts></Posts>
           <li>JSX</li>
           <li>Props</li>
           <li>Event Handler</li>
           <li>State</li>
           <li>load data</li>
         </ol>
+        <hr />
+        <Posts></Posts>
+        <post></post>
 
       </div>
     </>
