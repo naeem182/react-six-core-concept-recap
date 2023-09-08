@@ -2,6 +2,8 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Posts from './posts'
+import './PostStyle.css'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -23,6 +25,7 @@ function App() {
       <div style={olstyle}>
         <ol >
           <li>Components</li>
+          <Posts></Posts>
           <li>JSX</li>
           <li>Props</li>
           <li>Event Handler</li>
